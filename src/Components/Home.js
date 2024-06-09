@@ -25,7 +25,7 @@ export default function Home() {
             const weather_api_key = process.env.REACT_APP_WEATHER_API_KEY;
 
             try {
-                let response =  await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${weather_api_key}&units=metric`);
+                let response =  await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${weather_api_key}&units=metric`);
                 console.log("new data: ",response.data);
                 setWeatherdata(response.data);
 
