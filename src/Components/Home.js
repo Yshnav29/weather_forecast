@@ -193,18 +193,18 @@ export default function Home() {
                 {final_data && <h1 style={styles.maintemp}>{final_data.main.feels_like} &deg;C</h1>}
                 {final_data && <h2 style={styles.description}>{final_data.weather[0].description}</h2>}
                 <div style={styles.leftdivborder}></div>
-                <h3>{handleDate()}</h3>
-                <h3>{displayDay()}</h3>
-                {cityName && <h2>{cityName}</h2>}
+                <h3 style={{color: "#6b6b6b"}}>{handleDate()}</h3>
+                <h3 style={{color: "#6b6b6b"}}>{displayDay()}</h3>
+                {cityName && <h2 style={{fontSize: "2rem"}}>{cityName}</h2>}
             </div>
             
             <div style={styles.rightdiv}>
                 <ul style={styles.list}>
-                    <li className='days' style={styles.li} onClick={() => setFlag(0)}>Today</li>
-                    <li className='days' style={styles.li} onClick={() => setFlag(1)}>Tomorrow</li>
-                    <li className='days' style={styles.li} onClick={() => setFlag(2)}>{addTwoDay()}</li>
-                    <li className='days' style={styles.li} onClick={() => setFlag(3)}>{addThreeDay()}</li>
-                    <li className='days' style={styles.li} onClick={() => setFlag(4)}>{addFourDay()}</li>
+                    <li className='days' onClick={() => setFlag(0)}>Today</li>
+                    <li className='days' onClick={() => setFlag(1)}>Tomorrow</li>
+                    <li className='days' onClick={() => setFlag(2)}>{addTwoDay()}</li>
+                    <li className='days' onClick={() => setFlag(3)}>{addThreeDay()}</li>
+                    <li className='days' onClick={() => setFlag(4)}>{addFourDay()}</li>
                 </ul>
                 <div style={styles.featurewrapper}>
                     <div style={styles.feature} >
